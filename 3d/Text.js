@@ -22,27 +22,27 @@ export default class Text extends THREE.Object3D {
 
   createGeometry() {
 
-      this.geometry = new THREE.TextGeometry( this.text, {
-          font: this.font,
-          size: this.size,
-          height: this.height,
-          curveSegments: this.curveSegments,
-          bevelThickness: this.bevelThickness,
-          bevelSize: this.bevelSize,
-          bevelEnabled: this.bevelEnabled,
-          material: 0,
-          extrudeMaterial: 1,
-      });
+    this.geometry = new THREE.TextGeometry( this.text, {
+      font: this.font,
+      size: this.size,
+      height: this.height,
+      curveSegments: this.curveSegments,
+      bevelThickness: this.bevelThickness,
+      bevelSize: this.bevelSize,
+      bevelEnabled: this.bevelEnabled,
+      material: 0,
+      extrudeMaterial: 1,
+    });
 
-      this.geometry.computeBoundingBox();
-      this.geometry.computeVertexNormals();
+    this.geometry.computeBoundingBox();
+    this.geometry.computeVertexNormals();
   }
 
   createMaterial() {
-      this.material = new THREE.MeshBasicMaterial({
-        color: 0x00ff00,
-        wireframe: true,
-      });
+    this.material = new THREE.MeshBasicMaterial({
+      color: 0x00ff00,
+      wireframe: true,
+    });
   }
 
   update() {}
